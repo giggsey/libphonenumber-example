@@ -1,0 +1,252 @@
+{% extends '_page.twig' %}
+{% block title %}libphonenumber Demo{% endblock %}
+{% block content %}
+    {% set tableWidth=6 %}
+    <p class="lead"><a href="{{ baseurl }}">&laquo; Back to form</a></p>
+
+    {% include 'inputData.twig' %}
+    <hr/>
+
+    <h2><code>{{ get_class(phoneNumberObj) }}</code> Object</h2>
+    <div class="row">
+        <div class="col-{{ tableWidth }}">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th><code>getCountryCode()</code></th>
+                    <td>{{ phoneNumberObj.getCountryCode }}</td>
+                </tr>
+                <tr>
+                    <th><code>getNationalNumber()</code></th>
+                    <td>{{ phoneNumberObj.getNationalNumber }}</td>
+                </tr>
+                <tr>
+                    <th><code>getExtension()</code></th>
+                    <td>{{ phoneNumberObj.getExtension }}</td>
+                </tr>
+
+                <tr>
+                    <th><code>getCountryCodeSource()</code></th>
+                    <td title="libphonenumber\CountryCodeSource constant">
+                        {% if phoneNumberObj.getCountryCodeSource == 0 %}
+                            FROM_NUMBER_WITH_PLUS_SIGN
+                        {% elseif phoneNumberObj.getCountryCodeSource == 1 %}
+                            FROM_NUMBER_WITH_IDD
+                        {% elseif phoneNumberObj.getCountryCodeSource == 2 %}
+                            FROM_NUMBER_WITHOUT_PLUS_SIGN
+                        {% elseif phoneNumberObj.getCountryCodeSource == 3 %}
+                            FROM_DEFAULT_COUNTRY
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th><code>isItalianLeadingZero()</code></th>
+                    <td>{% if phoneNumberObj.isItalianLeadingZero == true %}true{% else %}false{% endif %}</td>
+                </tr>
+                <tr>
+                    <th><code>getRawInput()</code></th>
+                    <td>{{ phoneNumberObj.getRawInput }}</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr/>
+
+    <h2>Validation Results</h2>
+    <div class="row">
+        <div class="col-{{ tableWidth }}">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th><code>isPossibleNumber()</code></th>
+                    <td>{{ phoneNumberObj.isPossibleNumber }}</td>
+                </tr>
+                <tr>
+                    <th><code title="PhoneNumberUtil->isValidNumber(PhoneNumber $number)">isValidNumber()</code></th>
+                    <td>{% if validNumber == true %}true{% else %}false{% endif %}</td>
+                </tr>
+                <tr>
+                    <th><code title="PhoneNumberUtil->isValidNumberForRegion(PhoneNumber $number, String $region)">isValidNumberForRegion()</code>
+                    </th>
+                    <td>{% if validNumberForRegion == true %}true{% else %}false{% endif %}</td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <code title="PhoneNumberUtil->getRegionCodeForNumber(PhoneNumber $number)">getRegionCodeForNumber()</code>
+                    </th>
+                    <td>{{ phoneNumberRegion }}</td>
+                </tr>
+
+                <tr>
+                    <th><code title="PhoneNumberUtil->getNumberType(PhoneNumber $number)">getNumberType()</code></th>
+                    <td>{% if phoneNumberType == 0 %}
+                            FIXED_LINE
+                        {% elseif phoneNumberType == 1 %}
+                            MOBILE
+                        {% elseif phoneNumberType == 2 %}
+                            FIXED_LINE_OR_MOBILE
+                        {% elseif phoneNumberType == 3 %}
+                            TOLL_FREE
+                        {% elseif phoneNumberType == 4 %}
+                            PREMIUM_RATE
+                        {% elseif phoneNumberType == 5 %}
+                            SHARED_COST
+                        {% elseif phoneNumberType == 6 %}
+                            VOIP
+                        {% elseif phoneNumberType == 7 %}
+                            PERSONAL_NUMBER
+                        {% elseif phoneNumberType == 8 %}
+                            PAGER
+                        {% elseif phoneNumberType == 9 %}
+                            UAN
+                        {% elseif phoneNumberType == 10 %}
+                            UNKNOWN
+                        {% elseif phoneNumberType == 27 %}
+                            EMERGENCY
+                        {% elseif phoneNumberType == 28 %}
+                            VOICEMAIL
+                        {% elseif phoneNumberType == 29 %}
+                            SHORT_CODE
+                        {% elseif phoneNumberType == 30 %}
+                            STANDARD_RATE
+                        {% endif %}
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr/>
+
+    <h2>Formatting</h2>
+    <div class="row">
+        <div class="col-{{ tableWidth }}">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th title="libphonenumber\PhoneNumberFormat::E164">E164</th>
+                    <td>{% if validNumber == true %}
+                            {{ phoneUtil.format(phoneNumberObj, 0) }}
+                        {% else %}
+                            <em>Invalid Number</em>
+                        {% endif %}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><code title="PhoneNumberUtil->formatInOriginalFormat(PhoneNumber $number, String $country)">formatInOriginalFormat()</code>
+                    </th>
+                    <td>{{ phoneUtil.formatInOriginalFormat(phoneNumberObj, input['country']) }}</td>
+                </tr>
+
+
+                <tr>
+                    <th title="libphonenumber\PhoneNumberFormat::NATIONAL">National</th>
+                    <td>{{ phoneUtil.format(phoneNumberObj, 2) }}</td>
+                </tr>
+
+                <tr>
+                    <th title="libphonenumber\PhoneNumberFormat::INTERNATIONAL">International</th>
+                    <td>{% if validNumber == true %}
+                            {{ phoneUtil.format(phoneNumberObj, 1) }}
+                        {% else %}
+                            <em>Invalid Number</em>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th title="libphonenumber\PhoneNumberFormat::RFC3966">RFC3966</th>
+                    <td>{% if validNumber == true %}
+                            {{ phoneUtil.format(phoneNumberObj, 3) }}
+                        {% else %}
+                            <em>Invalid Number</em>
+                        {% endif %}
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th>Out of Country Format from US</th>
+                    <td>{% if validNumber == true %}
+                            {{ phoneUtil.formatOutOfCountryCallingNumber(phoneNumberObj, "US") }}
+                        {% else %}
+                            <em>Invalid Number</em>
+                        {% endif %}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Out of Country Format from CH</th>
+                    <td>{% if validNumber == true %}
+                            {{ phoneUtil.formatOutOfCountryCallingNumber(phoneNumberObj, "CH") }}
+                        {% else %}
+                            <em>Invalid Number</em>
+                        {% endif %}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Out of Country Format from GB</th>
+                    <td>{% if validNumber == true %}
+                            {{ phoneUtil.formatOutOfCountryCallingNumber(phoneNumberObj, "GB") }}
+                        {% else %}
+                            <em>Invalid Number</em>
+                        {% endif %}
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr/>
+
+    <h2>Geocoder Result</h2>
+    <div class="row">
+        <div class="col-{{ tableWidth }}">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>
+                        <code title="PhoneNumberOfflineGeocoder->getDescriptionForNumber(PhoneNumber $phoneNumber, String $language, String $region)">getDescriptionForNumber()</code>
+                    </th>
+                    <td>{{ geolocation }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+{% endblock %}

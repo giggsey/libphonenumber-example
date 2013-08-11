@@ -1,0 +1,14 @@
+{
+    "description": "An example site using libphonenumber-for-php",
+    "authors": [
+        {
+            "name": "Joshua Gigg",
+            "email": "giggsey@gmail.com"
+        }
+    ],
+    "require": {
+        "giggsey/libphonenumber-for-php": "5.7",
+        "giggsey/libphonenumber-geocoder": "dev-master",
+        "twig/twig": "~1.6.5"
+    }
+}

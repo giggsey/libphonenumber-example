@@ -1,0 +1,14 @@
+{% extends '_page.twig' %}
+{% block title %}libphonenumber Demo &raquo; Error{% endblock %}
+{% block content %}
+    <p class="lead"><a href="{{ baseurl }}">&laquo; Back to form</a></p>
+
+    {% include 'inputData.twig' %}
+    <hr/>
+
+    <h2>Exception Thrown: <code title="Exception Class">{{ get_class(exception) }}</code> (<code
+                title="Exception Code">{{ exception.getCode() }}</code>)</h2>
+    <blockquote><p title="Exception Message">{{ exception.getMessage() }}</p></blockquote>
+
+
+{% endblock %}

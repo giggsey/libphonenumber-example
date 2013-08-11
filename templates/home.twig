@@ -1,0 +1,47 @@
+{% extends '_page.twig' %}
+{% block title %}libphonenumber Demo{% endblock %}
+{% block content %}
+    <h1>libphonenumber Demo</h1>
+    <form class="form-horizontal" method="get" action="">
+        <div class="form-group">
+            <label for="phonenumber" class="col-3 control-label">Phone Number</label>
+
+            <div class="col-5">
+                <input type="tel" class="form-control" id="phonenumber" name='phonenumber' required="required"
+                       placeholder="0161 496 0000">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="country" class="col-3 control-label">Default Country</label>
+
+            <div class="col-3">
+                <input type="text" class="form-control" id="country" name='country' required="required"
+                       placeholder="GB">
+                <span class="help-block">An <a href='http://www.iso.org/iso/country_names_and_code_elements'>ISO
+                        3166-1</a> two letter country code</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="language" class="col-3 control-label">Locale for Geocoding</label>
+
+            <div class="col-3">
+                <div class="form-group">
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="language" name='language' placeholder="en">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="region" name='region' placeholder="GB">
+                    </div>
+                </div>
+                <span class="help-block">An <a href='http://en.wikipedia.org/wiki/IETF_language_tag'>IETF language
+                        tag</a> (defaults to en)</span>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-3 col-8">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
