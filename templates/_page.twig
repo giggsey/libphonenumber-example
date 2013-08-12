@@ -43,6 +43,13 @@
 
 <div class="container">
     {% block content %}{% endblock %}
+    <footer>
+        <p class="text-muted"><small>Running <a href="https://github.com/giggsey/libphonenumber-for-php">libphonenumber-for-php</a> at
+            <a href='https://github.com/giggsey/libphonenumber-for-php/tree/{{ version['giggsey/libphonenumber-for-php'].actual }}'>{{ version['giggsey/libphonenumber-for-php'].version }}</a>
+            &amp; <a href="https://github.com/giggsey/libphonenumber-geocoder">libphonenumber-geocoder</a> at
+            <a href='https://github.com/giggsey/libphonenumber-geocoder/tree/{{ version['giggsey/libphonenumber-geocoder'].actual }}'>{{ version['giggsey/libphonenumber-geocoder'].version }}</a>
+            </small></p>
+    </footer>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
