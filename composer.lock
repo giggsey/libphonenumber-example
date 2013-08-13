@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6e65caaecc4ff89c92a058ca5f215ba0",
+    "hash": "ee999a2523fa591dc7bb2c3192b48528",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "5.7",
+            "version": "5.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "5.7"
+                "reference": "5.7.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/5.7",
-                "reference": "5.7",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/5.7.2",
+                "reference": "5.7.2",
                 "shasum": ""
             },
             "replace": {
@@ -43,7 +43,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2013-07-24 15:02:05"
+            "time": "2013-08-13 08:55:39"
         },
         {
             "name": "giggsey/libphonenumber-geocoder",
