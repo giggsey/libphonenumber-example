@@ -35,6 +35,7 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['co
 
 
     $phoneNumberUtil = \libphonenumber\PhoneNumberUtil::getInstance();
+    $shortNumberUtil = new \libphonenumber\ShortNumberUtil($phoneNumberUtil);
     $phoneNumberGeocoder = \libphonenumber\geocoding\PhoneNumberOfflineGeocoder::getInstance();
 
     $validNumber = false;
@@ -74,6 +75,7 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['co
             'phoneNumberRegion' => $phoneNumberRegion,
             'phoneNumberType' => $phoneNumberType,
             'geolocation' => $geolocation,
+            'shortNumber' => $shortNumberUtil,
             'input' => $input
         )
     );
