@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6e65caaecc4ff89c92a058ca5f215ba0",
+    "hash": "bb11ccefab01de7eb48713f7e3f1b009",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "5.7",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "5.7"
+                "reference": "3227272a2f19af5202da3816fa34adaf7e97614c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/5.7",
-                "reference": "5.7",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/3227272a2f19af5202da3816fa34adaf7e97614c",
+                "reference": "3227272a2f19af5202da3816fa34adaf7e97614c",
                 "shasum": ""
             },
             "replace": {
@@ -26,6 +26,11 @@
                 "phpunit/phpunit": "3.7"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "libphonenumber": "src/"
@@ -43,7 +48,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2013-07-24 15:02:05"
+            "time": "2013-08-18 13:46:50"
         },
         {
             "name": "giggsey/libphonenumber-geocoder",
@@ -144,6 +149,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "giggsey/libphonenumber-for-php": 20,
         "giggsey/libphonenumber-geocoder": 20
     },
     "platform": [
