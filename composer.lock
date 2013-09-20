@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "bb11ccefab01de7eb48713f7e3f1b009",
+    "hash": "1f6229344d481c64cb260da8e8af1860",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "dev-master",
+            "version": "5.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "3227272a2f19af5202da3816fa34adaf7e97614c"
+                "reference": "ef005af3441a58ecd7aa201eaca7e1efeb7abee0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/3227272a2f19af5202da3816fa34adaf7e97614c",
-                "reference": "3227272a2f19af5202da3816fa34adaf7e97614c",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/ef005af3441a58ecd7aa201eaca7e1efeb7abee0",
+                "reference": "ef005af3441a58ecd7aa201eaca7e1efeb7abee0",
                 "shasum": ""
             },
             "replace": {
@@ -48,25 +48,25 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2013-08-18 13:46:50"
+            "time": "2013-09-20 21:25:34"
         },
         {
             "name": "giggsey/libphonenumber-geocoder",
-            "version": "dev-master",
+            "version": "5.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-geocoder.git",
-                "reference": "6eecff615dfa550bc367905ed45f570b05474257"
+                "reference": "482612ffa35117623b212d20d58dbd54f7a1bcd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-geocoder/zipball/6eecff615dfa550bc367905ed45f570b05474257",
-                "reference": "6eecff615dfa550bc367905ed45f570b05474257",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-geocoder/zipball/482612ffa35117623b212d20d58dbd54f7a1bcd0",
+                "reference": "482612ffa35117623b212d20d58dbd54f7a1bcd0",
                 "shasum": ""
             },
             "require": {
                 "ext-intl": "*",
-                "giggsey/libphonenumber-for-php": "~5.7"
+                "giggsey/libphonenumber-for-php": ">=5.8.2,<6.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~3.7"
@@ -94,7 +94,7 @@
                 "libphonenumber",
                 "phonenumber"
             ],
-            "time": "2013-07-28 21:32:14"
+            "time": "2013-09-20 21:31:39"
         },
         {
             "name": "twig/twig",
@@ -148,10 +148,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "giggsey/libphonenumber-for-php": 20,
-        "giggsey/libphonenumber-geocoder": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": [
 
     ],

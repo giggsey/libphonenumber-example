@@ -7,8 +7,8 @@
         }
     ],
     "require": {
-        "giggsey/libphonenumber-for-php": "~5.7@dev",
-        "giggsey/libphonenumber-geocoder": "dev-master",
+        "giggsey/libphonenumber-for-php": "~5.8",
+        "giggsey/libphonenumber-geocoder": "~5.8",
         "twig/twig": "~1.6.5"
     }
 }
