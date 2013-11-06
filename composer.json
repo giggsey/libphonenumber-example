@@ -3,12 +3,12 @@
     "authors": [
         {
             "name": "Joshua Gigg",
-            "email": "giggsey@gmail.com"
+            "email": "giggsey@gmail.com",
+            "homepage": "http://giggsey.com/"
         }
     ],
     "require": {
         "giggsey/libphonenumber-for-php": "~5.8",
-        "giggsey/libphonenumber-geocoder": "~5.8",
         "twig/twig": "~1.6.5"
     }
 }

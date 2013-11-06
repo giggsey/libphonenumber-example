@@ -40,9 +40,16 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['co
 
     $validNumber = false;
     $validNumberForRegion = false;
+    $possibleNumber = false;
+    $isPossibleNumberWithReason = null;
+    $geolocation = null;
+    $phoneNumberToCarrierInfo = null;
+    $timezone = null;
 
     try {
         $phoneNumber = $phoneNumberUtil->parse($input['phonenumber'], $input['country'], null, true);
+        $possibleNumber = $phoneNumberUtil->isPossibleNumber($phoneNumber);
+        $isPossibleNumberWithReason = $phoneNumberUtil->isPossibleNumberWithReason($phoneNumber);
         $validNumber = $phoneNumberUtil->isValidNumber($phoneNumber);
         $validNumberForRegion = $phoneNumberUtil->isValidNumberForRegion($phoneNumber, $input['country']);
         $phoneNumberRegion = $phoneNumberUtil->getRegionCodeForNumber($phoneNumber);
@@ -53,6 +60,9 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['co
             $input['language'],
             $input['region']
         );
+
+        $phoneNumberToCarrierInfo = \libphonenumber\PhoneNumberToCarrierMapper::getInstance()->getNameForNumber($phoneNumber, $input['language']);
+        $timezone = \libphonenumber\PhoneNumberToTimeZonesMapper::getInstance()->getTimeZonesForNumber($phoneNumber);
 
     } catch (\Exception $e) {
         echo $twig->render(
@@ -70,11 +80,15 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['co
         array(
             'phoneNumberObj' => $phoneNumber,
             'phoneUtil' => $phoneNumberUtil,
+            'possibleNumber' => $possibleNumber,
+            'isPossibleNumberWithReason' => $isPossibleNumberWithReason,
             'validNumber' => $validNumber,
             'validNumberForRegion' => $validNumberForRegion,
             'phoneNumberRegion' => $phoneNumberRegion,
             'phoneNumberType' => $phoneNumberType,
             'geolocation' => $geolocation,
+            'timezone' => $timezone,
+            'carrierinfo' => $phoneNumberToCarrierInfo,
             'shortNumber' => $shortNumberUtil,
             'input' => $input
         )

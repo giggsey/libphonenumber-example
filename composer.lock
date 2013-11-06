@@ -3,27 +3,31 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1f6229344d481c64cb260da8e8af1860",
+    "hash": "ddd5da8eb35b7b727ed8232f282b9675",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "5.8.4",
+            "version": "5.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "ef005af3441a58ecd7aa201eaca7e1efeb7abee0"
+                "reference": "ffe2a42c45582cd63eaed8850cd646e8d83793c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/ef005af3441a58ecd7aa201eaca7e1efeb7abee0",
-                "reference": "ef005af3441a58ecd7aa201eaca7e1efeb7abee0",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/ffe2a42c45582cd63eaed8850cd646e8d83793c0",
+                "reference": "ffe2a42c45582cd63eaed8850cd646e8d83793c0",
                 "shasum": ""
             },
+            "require": {
+                "ext-intl": "*"
+            },
             "replace": {
-                "practo/libphonenumber-for-php": "*"
+                "giggsey/libphonenumber-geocoder": "*"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7"
+                "phpunit/phpunit": "~3.7",
+                "symfony/console": "~2.3.5"
             },
             "type": "library",
             "extra": {
@@ -40,61 +44,24 @@
             "license": [
                 "Apache-2.0"
             ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "http://giggsey.com/"
+                }
+            ],
             "description": "Unofficial PHP Port of Google's libphonenumber",
             "homepage": "https://github.com/giggsey/libphonenumber-for-php",
             "keywords": [
+                "geocoding",
+                "geolocation",
                 "libphonenumber",
                 "mobile",
                 "phonenumber",
                 "validation"
             ],
-            "time": "2013-09-20 21:25:34"
-        },
-        {
-            "name": "giggsey/libphonenumber-geocoder",
-            "version": "5.8.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/giggsey/libphonenumber-geocoder.git",
-                "reference": "482612ffa35117623b212d20d58dbd54f7a1bcd0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-geocoder/zipball/482612ffa35117623b212d20d58dbd54f7a1bcd0",
-                "reference": "482612ffa35117623b212d20d58dbd54f7a1bcd0",
-                "shasum": ""
-            },
-            "require": {
-                "ext-intl": "*",
-                "giggsey/libphonenumber-for-php": ">=5.8.2,<6.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "libphonenumber\\geocoding\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Joshua Gigg",
-                    "email": "giggsey@gmail.com"
-                }
-            ],
-            "description": "An unofficial port of Google's libphonenumber geocoder",
-            "homepage": "https://github.com/giggsey/libphonenumber-geocoder",
-            "keywords": [
-                "geocoding",
-                "libphonenumber",
-                "phonenumber"
-            ],
-            "time": "2013-09-20 21:31:39"
+            "time": "2013-11-06 17:37:54"
         },
         {
             "name": "twig/twig",

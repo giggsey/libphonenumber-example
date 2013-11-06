@@ -73,96 +73,86 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th><code title="PhoneNumberUtil->isValidNumber(PhoneNumber $number)">isValidNumber()</code></th>
-                    <td>{% if validNumber == true %}true{% else %}false{% endif %}</td>
-                </tr>
-                <tr>
-                    <th><code title="PhoneNumberUtil->isValidNumberForRegion(PhoneNumber $number, String $region)">isValidNumberForRegion()</code>
+                    <th><code title="PhoneNumberUtil->isPossibleNumber(PhoneNumber $number)">isPossibleNumber()</code>
                     </th>
-                    <td>{% if validNumberForRegion == true %}true{% else %}false{% endif %}</td>
+                    <td>{% if possibleNumber == true %}true{% else %}false{% endif %}</td>
                 </tr>
-
-                <tr>
-                    <th>
-                        <code title="PhoneNumberUtil->getRegionCodeForNumber(PhoneNumber $number)">getRegionCodeForNumber()</code>
+                {% if possibleNumber == false %}
+                    <th><code title="PhoneNumberUtil->isPossibleNumberWithReason(PhoneNumber $number)">isPossibleNumberWithReason()</code>
                     </th>
-                    <td>{{ phoneNumberRegion }}</td>
-                </tr>
+                    <td title="libphonenumber\ValidationResult constant">
+                        {% if isPossibleNumberWithReason == 0 %}
+                            IS_POSSIBLE
+                        {% elseif isPossibleNumberWithReason == 1 %}
+                            INVALID_COUNTRY_CODE
+                        {% elseif isPossibleNumberWithReason == 2 %}
+                            TOO_SHORT
+                        {% elseif isPossibleNumberWithReason == 3 %}
+                            TOO_LONG
+                        {% endif %}</td>
 
-                <tr>
-                    <th><code title="PhoneNumberUtil->getNumberType(PhoneNumber $number)">getNumberType()</code></th>
-                    <td>{% if phoneNumberType == 0 %}
-                            FIXED_LINE
-                        {% elseif phoneNumberType == 1 %}
-                            MOBILE
-                        {% elseif phoneNumberType == 2 %}
-                            FIXED_LINE_OR_MOBILE
-                        {% elseif phoneNumberType == 3 %}
-                            TOLL_FREE
-                        {% elseif phoneNumberType == 4 %}
-                            PREMIUM_RATE
-                        {% elseif phoneNumberType == 5 %}
-                            SHARED_COST
-                        {% elseif phoneNumberType == 6 %}
-                            VOIP
-                        {% elseif phoneNumberType == 7 %}
-                            PERSONAL_NUMBER
-                        {% elseif phoneNumberType == 8 %}
-                            PAGER
-                        {% elseif phoneNumberType == 9 %}
-                            UAN
-                        {% elseif phoneNumberType == 10 %}
-                            UNKNOWN
-                        {% elseif phoneNumberType == 27 %}
-                            EMERGENCY
-                        {% elseif phoneNumberType == 28 %}
-                            VOICEMAIL
-                        {% elseif phoneNumberType == 29 %}
-                            SHORT_CODE
-                        {% elseif phoneNumberType == 30 %}
-                            STANDARD_RATE
-                        {% endif %}
-                    </td>
-                </tr>
+                {% else %}
+                    <tr>
+                        <th><code title="PhoneNumberUtil->isValidNumber(PhoneNumber $number)">isValidNumber()</code>
+                        </th>
+                        <td>{% if validNumber == true %}true{% else %}false{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <th><code title="PhoneNumberUtil->isValidNumberForRegion(PhoneNumber $number, String $region)">isValidNumberForRegion()</code>
+                        </th>
+                        <td>{% if validNumberForRegion == true %}true{% else %}false{% endif %}</td>
+                    </tr>
 
+                    <tr>
+                        <th>
+                            <code title="PhoneNumberUtil->getRegionCodeForNumber(PhoneNumber $number)">getRegionCodeForNumber()</code>
+                        </th>
+                        <td>{{ phoneNumberRegion }}</td>
+                    </tr>
+
+                    <tr>
+                        <th><code title="PhoneNumberUtil->getNumberType(PhoneNumber $number)">getNumberType()</code>
+                        </th>
+                        <td>{% if phoneNumberType == 0 %}
+                                FIXED_LINE
+                            {% elseif phoneNumberType == 1 %}
+                                MOBILE
+                            {% elseif phoneNumberType == 2 %}
+                                FIXED_LINE_OR_MOBILE
+                            {% elseif phoneNumberType == 3 %}
+                                TOLL_FREE
+                            {% elseif phoneNumberType == 4 %}
+                                PREMIUM_RATE
+                            {% elseif phoneNumberType == 5 %}
+                                SHARED_COST
+                            {% elseif phoneNumberType == 6 %}
+                                VOIP
+                            {% elseif phoneNumberType == 7 %}
+                                PERSONAL_NUMBER
+                            {% elseif phoneNumberType == 8 %}
+                                PAGER
+                            {% elseif phoneNumberType == 9 %}
+                                UAN
+                            {% elseif phoneNumberType == 10 %}
+                                UNKNOWN
+                            {% elseif phoneNumberType == 27 %}
+                                EMERGENCY
+                            {% elseif phoneNumberType == 28 %}
+                                VOICEMAIL
+                            {% elseif phoneNumberType == 29 %}
+                                SHORT_CODE
+                            {% elseif phoneNumberType == 30 %}
+                                STANDARD_RATE
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endif %}
                 </tbody>
             </table>
         </div>
     </div>
 
     <hr/>
-
-
-
-    <h2><code>libphonenumber\ShortNumberUtil</code></h2>
-    <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
-            <table class="table table-striped table-bordered">
-                <thead>
-                <tr>
-                    <th>Function</th>
-                    <th>Value</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                <tr>
-                    <th><code>isEmergencyNumber()</code></th>
-                    <td>{% if shortNumber.isEmergencyNumber(input['phonenumber'], input['country']) == true %}true{% else %}false{% endif %}</td>
-                </tr>
-
-                <tr>
-                    <th><code>connectsToEmergencyNumber()</code></th>
-                    <td>{% if shortNumber.connectsToEmergencyNumber(input['phonenumber'], input['country']) == true %}true{% else %}false{% endif %}</td>
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <hr/>
-
 
 
     <h2>Formatting</h2>
@@ -256,6 +246,35 @@
     <hr/>
 
 
+    <h2>ShortNumberUtil</h2>
+    <div class="row">
+        <div class="col-sm-{{ tableWidth }}">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <th><code>isEmergencyNumber()</code></th>
+                    <td>{% if shortNumber.isEmergencyNumber(input['phonenumber'], input['country']) == true %}true{% else %}false{% endif %}</td>
+                </tr>
+
+                <tr>
+                    <th><code>connectsToEmergencyNumber()</code></th>
+                    <td>{% if shortNumber.connectsToEmergencyNumber(input['phonenumber'], input['country']) == true %}true{% else %}false{% endif %}</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr/>
+
 
     <h2>Example Numbers</h2>
     <div class="row">
@@ -285,7 +304,6 @@
                 </tr>
 
 
-
                 </tbody>
             </table>
         </div>
@@ -293,9 +311,7 @@
 
     <hr/>
 
-
-
-    <h2>Geocoder Result</h2>
+    <h2>PhoneNumberOfflineGeocoder Result</h2>
     <div class="row">
         <div class="col-sm-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
@@ -317,5 +333,54 @@
         </div>
     </div>
 
+
+    <hr/>
+
+    <h2>PhoneNumberToCarrierMapper Result</h2>
+    <div class="row">
+        <div class="col-sm-{{ tableWidth }}">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>
+                        <code title="PhoneNumberToCarrierMapper->getNameForNumber(PhoneNumber $phoneNumber, String $language)">getNameForNumber()</code>
+                    </th>
+                    <td>{{ carrierinfo }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <hr/>
+
+    <h2>PhoneNumberToTimeZonesMapper Result</h2>
+    <div class="row">
+        <div class="col-sm-{{ tableWidth }}">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>
+                        <code title="PhoneNumberToTimeZonesMapper->getTimeZonesForNumber(PhoneNumber $phoneNumber)">getTimeZonesForNumber()</code>
+                    </th>
+                    <td>{{ timezone|join(', ') }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 {% endblock %}
