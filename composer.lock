@@ -3,37 +3,34 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ddd5da8eb35b7b727ed8232f282b9675",
+    "hash": "6255553b106c0da959d20369fbf9e314",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "5.9.4",
+            "version": "6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "d61d134d6faa1dd053d4b7ee264f8380307360bc"
+                "reference": "0e7c860d983e141b84fd763b70c4ce3c3f8f331e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/d61d134d6faa1dd053d4b7ee264f8380307360bc",
-                "reference": "d61d134d6faa1dd053d4b7ee264f8380307360bc",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/0e7c860d983e141b84fd763b70c4ce3c3f8f331e",
+                "reference": "0e7c860d983e141b84fd763b70c4ce3c3f8f331e",
                 "shasum": ""
             },
             "require": {
                 "ext-intl": "*"
             },
-            "replace": {
-                "giggsey/libphonenumber-geocoder": "*"
-            },
             "require-dev": {
-                "phpunit/phpunit": "~3.7",
+                "phpunit/phpunit": "3.7.*",
                 "satooshi/php-coveralls": "~0.6",
-                "symfony/console": "~2.3.5"
+                "symfony/console": "~2.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.x-dev"
+                    "dev-master": "6.x-dev"
                 }
             },
             "autoload": {
@@ -62,26 +59,31 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2014-02-07 19:14:58"
+            "time": "2014-02-26 12:39:03"
         },
         {
             "name": "twig/twig",
-            "version": "1.6.5",
+            "version": "v1.15.1",
             "source": {
                 "type": "git",
-                "url": "git://github.com/fabpot/Twig.git",
-                "reference": "v1.6.5"
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/zipball/v1.6.5",
-                "reference": "v1.6.5",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/1fb5784662f438d7d96a541e305e28b812e2eeed",
+                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.15-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Twig_": "lib/"
@@ -89,16 +91,24 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com"
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://github.com/fabpot/Twig/graphs/contributors",
+                    "role": "Contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -106,7 +116,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2012-04-11 02:00:38"
+            "time": "2014-02-13 10:19:29"
         }
     ],
     "packages-dev": [

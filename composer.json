@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "giggsey/libphonenumber-for-php": "~5.8",
-        "twig/twig": "~1.6.5"
+        "giggsey/libphonenumber-for-php": "~6.0",
+        "twig/twig": "~1.6"
     }
 }
