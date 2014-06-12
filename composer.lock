@@ -1,28 +1,30 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
     "hash": "6255553b106c0da959d20369fbf9e314",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "6.1",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "6b307381c601da81849adbb3341d7e9903ac2665"
+                "reference": "e01fa6dc3d89d6717af62140bd053f04f5cbb045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/6b307381c601da81849adbb3341d7e9903ac2665",
-                "reference": "6b307381c601da81849adbb3341d7e9903ac2665",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/e01fa6dc3d89d6717af62140bd053f04f5cbb045",
+                "reference": "e01fa6dc3d89d6717af62140bd053f04f5cbb045",
                 "shasum": ""
             },
             "require": {
                 "ext-intl": "*"
             },
             "require-dev": {
+                "phing/phing": "~2.7",
                 "phpunit/phpunit": "~4.0",
                 "satooshi/php-coveralls": "~0.6",
                 "symfony/console": "~2.4"
@@ -59,7 +61,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2014-05-19 13:03:59"
+            "time": "2014-06-10 11:29:11"
         },
         {
             "name": "twig/twig",
