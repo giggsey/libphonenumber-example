@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "6.1.1",
+            "version": "6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "e01fa6dc3d89d6717af62140bd053f04f5cbb045"
+                "reference": "cecc7b729f24a96898109711cb9af462ec7f5935"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/e01fa6dc3d89d6717af62140bd053f04f5cbb045",
-                "reference": "e01fa6dc3d89d6717af62140bd053f04f5cbb045",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/cecc7b729f24a96898109711cb9af462ec7f5935",
+                "reference": "cecc7b729f24a96898109711cb9af462ec7f5935",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2014-06-10 11:29:11"
+            "time": "2014-07-01 09:41:50"
         },
         {
             "name": "twig/twig",
@@ -121,20 +121,10 @@
             "time": "2014-02-13 10:19:29"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "stability-flags": [],
+    "platform": [],
+    "platform-dev": []
 }
