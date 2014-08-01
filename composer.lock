@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "6.2",
+            "version": "6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "cecc7b729f24a96898109711cb9af462ec7f5935"
+                "reference": "4d23cbe855811c3770ebc278754c7d2a31ce2763"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/cecc7b729f24a96898109711cb9af462ec7f5935",
-                "reference": "cecc7b729f24a96898109711cb9af462ec7f5935",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/4d23cbe855811c3770ebc278754c7d2a31ce2763",
+                "reference": "4d23cbe855811c3770ebc278754c7d2a31ce2763",
                 "shasum": ""
             },
             "require": {
@@ -61,20 +61,20 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2014-07-01 09:41:50"
+            "time": "2014-07-29 07:58:26"
         },
         {
             "name": "twig/twig",
-            "version": "v1.15.1",
+            "version": "v1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed"
+                "reference": "8ce37115802e257a984a82d38254884085060024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/1fb5784662f438d7d96a541e305e28b812e2eeed",
-                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/8ce37115802e257a984a82d38254884085060024",
+                "reference": "8ce37115802e257a984a82d38254884085060024",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.16-dev"
                 }
             },
             "autoload": {
@@ -118,13 +118,14 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2014-02-13 10:19:29"
+            "time": "2014-07-05 12:19:05"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
+    "prefer-stable": false,
     "platform": [],
     "platform-dev": []
 }
