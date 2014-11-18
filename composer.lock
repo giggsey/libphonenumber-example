@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6255553b106c0da959d20369fbf9e314",
+    "hash": "56fbe3e68cac96a2ff0bcbd481bff5bd",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "6.3.1",
+            "version": "7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "9dd40778f3df9c610991589fdb19ef279383d5bb"
+                "reference": "7a66a13b9b1c9c6af0a2bf869722497897553dea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/9dd40778f3df9c610991589fdb19ef279383d5bb",
-                "reference": "9dd40778f3df9c610991589fdb19ef279383d5bb",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/7a66a13b9b1c9c6af0a2bf869722497897553dea",
+                "reference": "7a66a13b9b1c9c6af0a2bf869722497897553dea",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.x-dev"
+                    "dev-master": "7.x-dev"
                 }
             },
             "autoload": {
@@ -54,7 +54,7 @@
                     "homepage": "http://giggsey.com/"
                 }
             ],
-            "description": "Unofficial PHP Port of Google's libphonenumber",
+            "description": "PHP Port of Google's libphonenumber",
             "homepage": "https://github.com/giggsey/libphonenumber-for-php",
             "keywords": [
                 "geocoding",
@@ -64,20 +64,20 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2014-10-14 11:11:35"
+            "time": "2014-11-03 14:47:13"
         },
         {
             "name": "twig/twig",
-            "version": "v1.16.1",
+            "version": "v1.16.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Twig.git",
-                "reference": "7c4c01dcf578523cfcddf383641a4f12790270ec"
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/7c4c01dcf578523cfcddf383641a4f12790270ec",
-                "reference": "7c4c01dcf578523cfcddf383641a4f12790270ec",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
+                "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2014-10-10 14:09:53"
+            "time": "2014-10-17 12:53:44"
         }
     ],
     "packages-dev": [],
