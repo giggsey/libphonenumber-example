@@ -227,6 +227,15 @@
                         {% endif %}
                     </td>
                 </tr>
+                 <tr>
+                    <th>Out of Country Format from FR</th>
+                    <td>{% if validNumber == true %}
+                            {{ phoneUtil.formatOutOfCountryCallingNumber(phoneNumberObj, "FR") }}
+                        {% else %}
+                            <em>Invalid Number</em>
+                        {% endif %}
+                    </td>
+                </tr>
 
                 <tr>
                     <th>Out of Country Format from GB</th>
