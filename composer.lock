@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "7.0.4",
+            "version": "7.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "f992e78b306563120b42ff0c8b4d957837e07e2a"
+                "reference": "7e49f5904a35cf7a5985de9df6397c296ea504f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/f992e78b306563120b42ff0c8b4d957837e07e2a",
-                "reference": "f992e78b306563120b42ff0c8b4d957837e07e2a",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/7e49f5904a35cf7a5985de9df6397c296ea504f1",
+                "reference": "7e49f5904a35cf7a5985de9df6397c296ea504f1",
                 "shasum": ""
             },
             "require": {
@@ -64,24 +64,24 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2015-03-25 12:53:06"
+            "time": "2015-04-28 19:50:26"
         },
         {
             "name": "twig/twig",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf"
+                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4cf7464348e7f9893a93f7096a90b73722be99cf",
-                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9f70492f44398e276d1b81c1b43adfe6751c7b7f",
+                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.4"
+                "php": ">=5.2.7"
             },
             "type": "library",
             "extra": {
@@ -121,7 +121,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-01-25 17:32:08"
+            "time": "2015-04-19 08:30:27"
         }
     ],
     "packages-dev": [],
