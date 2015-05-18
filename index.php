@@ -29,7 +29,7 @@ $twig->addFunction(
         // Borrowed from Laravel
         $manifest = json_decode(file_get_contents(__DIR__ . '/build/rev-manifest.json'), true);
         if (isset($manifest[$file])) {
-            return '/build/' . $manifest[$file];
+            return 'build/' . $manifest[$file];
         }
 
         throw new InvalidArgumentException("File {$file} not defined in asset manifest.");
