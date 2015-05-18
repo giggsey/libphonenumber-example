@@ -23,6 +23,20 @@ $twig->addGlobal('version', $versionDetails);
 
 $twig->addFunction('get_class', new Twig_Function_Function('get_class'));
 
+$twig->addFunction(
+    new Twig_SimpleFunction(
+        'elixir', function ($file) {
+        // Borrowed from Laravel
+        $manifest = json_decode(file_get_contents(__DIR__ . '/build/rev-manifest.json'), true);
+        if (isset($manifest[$file])) {
+            return '/build/' . $manifest[$file];
+        }
+
+        throw new InvalidArgumentException("File {$file} not defined in asset manifest.");
+    }
+    )
+);
+
 
 /* Check if we have loaded variables */
 if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['country']) && $_GET['country'] != '') {
@@ -61,7 +75,10 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['co
             $input['region']
         );
 
-        $phoneNumberToCarrierInfo = \libphonenumber\PhoneNumberToCarrierMapper::getInstance()->getNameForNumber($phoneNumber, $input['language']);
+        $phoneNumberToCarrierInfo = \libphonenumber\PhoneNumberToCarrierMapper::getInstance()->getNameForNumber(
+            $phoneNumber,
+            $input['language']
+        );
         $timezone = \libphonenumber\PhoneNumberToTimeZonesMapper::getInstance()->getTimeZonesForNumber($phoneNumber);
 
     } catch (\Exception $e) {

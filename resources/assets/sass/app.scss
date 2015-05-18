@@ -1,0 +1,12 @@
+$icon-font-path: "/fonts/bootstrap/";
+$fa-font-path:   "/fonts/fontawesome";
+@import "bootstrap";
+@import "font-awesome";
+
+body {
+  padding-top: 70px;
+}
+
+dt, dd {
+  line-height: 2.75;
+}
