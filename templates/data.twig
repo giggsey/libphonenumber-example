@@ -255,7 +255,7 @@
     <hr/>
 
 
-    <h2>ShortNumberUtil</h2>
+    <h2>ShortNumberInfo</h2>
     <div class="row">
         <div class="col-sm-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
@@ -266,6 +266,50 @@
                 </tr>
                 </thead>
                 <tbody>
+
+                <tr>
+                    <th><code>isPossibleShortNumber()</code></th>
+                    <td>{% if shortNumber.isPossibleShortNumber(phoneNumberObj) == true %}true{% else %}false{% endif %}</td>
+                </tr>
+
+                <tr>
+                    <th><code>isValidShortNumber()</code></th>
+                    <td>{% if shortNumber.isValidShortNumber(phoneNumberObj) == true %}true{% else %}false{% endif %}</td>
+                </tr>
+
+                <tr>
+                    <th><code>isPossibleShortNumberForRegion()</code></th>
+                    <td>{% if shortNumber.isPossibleShortNumberForRegion(phoneNumberObj, phoneNumberRegion) == true %}true{% else %}false{% endif %}</td>
+                </tr>
+
+                <tr>
+                    <th><code>isValidShortNumberForRegion()</code></th>
+                    <td>{% if shortNumber.isValidShortNumberForRegion(phoneNumberObj, phoneNumberRegion) == true %}true{% else %}false{% endif %}</td>
+                </tr>
+
+
+                <tr>
+                    <th><code>getExpectedCost()</code></th>
+                    {% set getExpectedCost = shortNumber.getExpectedCost(phoneNumberObj) %}
+                    <td>{% if getExpectedCost == 3 %}TOLL_FREE
+                        {% elseif getExpectedCost == 4 %}PREMIUM_RATE
+                        {% elseif getExpectedCost == 30 %}STANDARD_RATE
+                        {% elseif getExpectedCost == 10 %}UNKNOWN_COST
+                        {% endif %}
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th>getExpectedCostForRegion()</th>
+                    {% set getExpectedCostForRegion = shortNumber.getExpectedCostForRegion(phoneNumberObj, phoneNumberRegion) %}
+                    <td>{% if getExpectedCostForRegion == 3 %}TOLL_FREE
+                        {% elseif getExpectedCostForRegion == 4 %}PREMIUM_RATE
+                        {% elseif getExpectedCostForRegion == 30 %}STANDARD_RATE
+                        {% elseif getExpectedCostForRegion == 10 %}UNKNOWN_COST
+                        {% endif %}
+                    </td>
+                </tr>
 
                 <tr>
                     <th><code>isEmergencyNumber()</code></th>
