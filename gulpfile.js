@@ -3,7 +3,8 @@ var elixir = require('laravel-elixir');
 var paths = {
     'jquery': './bower_components/jquery/',
     'bootstrap': './bower_components/bootstrap-sass-official/assets/',
-    'fontawesome': './bower_components/fontawesome/'
+    'fontawesome': './bower_components/fontawesome/',
+    'flags': './bower_components/world-flags-sprite/images/'
 };
 
 elixir.config.publicDir = './';
@@ -12,6 +13,7 @@ elixir(function(mix) {
     mix.sass('*', 'css/', {includePaths: [paths.bootstrap + 'stylesheets', paths.fontawesome + 'scss']})
         .copy(paths.bootstrap + 'fonts/bootstrap/**', 'fonts/bootstrap')
         .copy(paths.fontawesome + 'fonts/**', 'fonts/fontawesome')
+        .copy(paths.flags + '**', 'images/')
         .scripts([
             paths.jquery + "dist/jquery.js",
             paths.bootstrap + "javascripts/bootstrap.js",

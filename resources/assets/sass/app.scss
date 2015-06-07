@@ -1,7 +1,18 @@
 $icon-font-path: "../../fonts/bootstrap/";
 $fa-font-path:   "../../fonts/fontawesome";
+$flags-images-path: "../../images";
+
 @import "bootstrap";
 @import "font-awesome";
+@import "../../../bower_components/world-flags-sprite/stylesheets/flags32.scss";
+
+.f32 .flag {
+    display:inline-block;
+    height:32px;
+    vertical-align:text-top;
+    line-height:32px;
+    padding-left: 40px;
+}
 
 body {
   padding-top: 70px;

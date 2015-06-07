@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "56fbe3e68cac96a2ff0bcbd481bff5bd",
+    "hash": "73f201467d5ea90a70a181e0fc1edc32",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
@@ -122,6 +122,53 @@
                 "templating"
             ],
             "time": "2015-04-19 08:30:27"
+        },
+        {
+            "name": "umpirsky/country-list",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/umpirsky/country-list.git",
+                "reference": "6fbb672c820607af601f1e918cff540f79d9e6bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/umpirsky/country-list/zipball/6fbb672c820607af601f1e918cff540f79d9e6bd",
+                "reference": "6fbb672c820607af601f1e918cff540f79d9e6bd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/dbal": "~2.4",
+                "symfony/class-loader": "~2.5",
+                "symfony/console": "~2.5",
+                "symfony/filesystem": "~2.5",
+                "symfony/finder": "~2.5",
+                "symfony/locale": "~2.5",
+                "symfony/yaml": "~2.5",
+                "zendframework/zend-db": "~2.3",
+                "zendframework/zendframework1": "~1.12"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Umpirsky\\Country": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Саша Стаменковић",
+                    "email": "umpirsky@gmail.com"
+                }
+            ],
+            "description": "List of all countries with names and ISO 3166-1 codes in all languages and data formats.",
+            "time": "2015-02-02 18:18:35"
         }
     ],
     "packages-dev": [],

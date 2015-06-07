@@ -2,6 +2,7 @@
   "name": "libphonenumber-example",
   "dependencies": {
     "bootstrap-sass-official": "~3.3",
-    "fontawesome": "~4.3"
+    "fontawesome": "~4.3",
+    "world-flags-sprite": "*"
   }
 }

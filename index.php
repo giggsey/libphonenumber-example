@@ -92,6 +92,19 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['co
         exit;
     }
 
+    $regions = $phoneNumberUtil->getSupportedRegions();
+
+    asort($regions);
+
+    $baseLanguagePath = __DIR__ . '/vendor/umpirsky/country-list/country/cldr/';
+
+    $resolvedPath = realpath($baseLanguagePath . $input['language'] . '/country.php');
+    if (strpos($resolvedPath, $baseLanguagePath) === 0 && file_exists($resolvedPath)) {
+        $countries = require $resolvedPath;
+    } else {
+        $countries = require $baseLanguagePath . 'en/country.php';
+    }
+
     echo $twig->render(
         'data.twig',
         array(
@@ -107,7 +120,9 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['co
             'timezone' => $timezone,
             'carrierinfo' => $phoneNumberToCarrierInfo,
             'shortNumber' => $shortNumberInfo,
-            'input' => $input
+            'input' => $input,
+            'regions' => $regions,
+            'countries' => $countries,
         )
     );
 } else {
