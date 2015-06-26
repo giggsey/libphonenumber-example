@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "7.0.6",
+            "version": "7.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "88554d43fcb2a686949f01a1c8f364962551ba24"
+                "reference": "c1c2ab9144479c4a67286d8f150d82770aca9400"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/88554d43fcb2a686949f01a1c8f364962551ba24",
-                "reference": "88554d43fcb2a686949f01a1c8f364962551ba24",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/c1c2ab9144479c4a67286d8f150d82770aca9400",
+                "reference": "c1c2ab9144479c4a67286d8f150d82770aca9400",
                 "shasum": ""
             },
             "require": {
@@ -64,20 +64,20 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2015-06-01 13:53:38"
+            "time": "2015-06-26 07:56:20"
         },
         {
             "name": "twig/twig",
-            "version": "v1.18.1",
+            "version": "v1.18.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f"
+                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9f70492f44398e276d1b81c1b43adfe6751c7b7f",
-                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e8e6575abf6102af53ec283f7f14b89e304fa602",
+                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-04-19 08:30:27"
+            "time": "2015-06-06 23:31:24"
         },
         {
             "name": "umpirsky/country-list",
