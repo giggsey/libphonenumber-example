@@ -8,22 +8,25 @@
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "7.0.9",
+            "version": "7.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "319fd6440e997f03658fc833a37d57c1a99f7e32"
+                "reference": "548dfad32e5a08681d81d68358f70e0ffec90c9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/319fd6440e997f03658fc833a37d57c1a99f7e32",
-                "reference": "319fd6440e997f03658fc833a37d57c1a99f7e32",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/548dfad32e5a08681d81d68358f70e0ffec90c9a",
+                "reference": "548dfad32e5a08681d81d68358f70e0ffec90c9a",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*"
             },
             "require-dev": {
+                "pear/pear-core-minimal": "^1.9",
+                "pear/pear_exception": "*",
+                "pear/versioncontrol_git": "dev-master",
                 "phing/phing": "~2.7",
                 "phpunit/phpunit": "~4.0",
                 "satooshi/php-coveralls": "~0.6",
@@ -64,29 +67,33 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2015-08-04 09:42:04"
+            "time": "2015-09-01 20:26:39"
         },
         {
             "name": "twig/twig",
-            "version": "v1.19.0",
+            "version": "v1.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "edbeaf43b0a606cdaadc32a11d2673614a377b90"
+                "reference": "ca8d3aa90b6a01c82e07909fe815d6b443e75a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/edbeaf43b0a606cdaadc32a11d2673614a377b90",
-                "reference": "edbeaf43b0a606cdaadc32a11d2673614a377b90",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ca8d3aa90b6a01c82e07909fe815d6b443e75a23",
+                "reference": "ca8d3aa90b6a01c82e07909fe815d6b443e75a23",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.7"
             },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.19-dev"
+                    "dev-master": "1.21-dev"
                 }
             },
             "autoload": {
@@ -121,7 +128,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-07-31 13:45:26"
+            "time": "2015-08-26 08:58:31"
         },
         {
             "name": "umpirsky/country-list",
