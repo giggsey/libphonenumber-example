@@ -5,19 +5,20 @@
         "This file is @generated automatically"
     ],
     "hash": "73f201467d5ea90a70a181e0fc1edc32",
+    "content-hash": "8f511f7ae88abd4d8294fa7f43d3486a",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "7.0.11",
+            "version": "7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "252294eadb22635588ce83f2a8442bdfb9cb01b5"
+                "reference": "75277038380dbeba6c915749add6c0d38edd3719"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/252294eadb22635588ce83f2a8442bdfb9cb01b5",
-                "reference": "252294eadb22635588ce83f2a8442bdfb9cb01b5",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/75277038380dbeba6c915749add6c0d38edd3719",
+                "reference": "75277038380dbeba6c915749add6c0d38edd3719",
                 "shasum": ""
             },
             "require": {
@@ -67,20 +68,20 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2015-09-16 14:33:08"
+            "time": "2015-10-08 14:46:18"
         },
         {
             "name": "twig/twig",
-            "version": "v1.22.1",
+            "version": "v1.22.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "b7fc2469fa009897871fb95b68237286fc54a5ad"
+                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b7fc2469fa009897871fb95b68237286fc54a5ad",
-                "reference": "b7fc2469fa009897871fb95b68237286fc54a5ad",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
+                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +129,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-09-15 06:50:16"
+            "time": "2015-09-22 13:59:32"
         },
         {
             "name": "umpirsky/country-list",
