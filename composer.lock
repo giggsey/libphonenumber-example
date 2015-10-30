@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "7.1.0",
+            "version": "7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "75277038380dbeba6c915749add6c0d38edd3719"
+                "reference": "8e2e8f97645b99cbb570494e4aa2aa7b321ee34b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/75277038380dbeba6c915749add6c0d38edd3719",
-                "reference": "75277038380dbeba6c915749add6c0d38edd3719",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/8e2e8f97645b99cbb570494e4aa2aa7b321ee34b",
+                "reference": "8e2e8f97645b99cbb570494e4aa2aa7b321ee34b",
                 "shasum": ""
             },
             "require": {
@@ -68,20 +68,20 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2015-10-08 14:46:18"
+            "time": "2015-10-30 09:46:36"
         },
         {
             "name": "twig/twig",
-            "version": "v1.22.2",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a"
+                "reference": "5868cd822fd6cf626d5f805439575f9c323cee2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
-                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/5868cd822fd6cf626d5f805439575f9c323cee2a",
+                "reference": "5868cd822fd6cf626d5f805439575f9c323cee2a",
                 "shasum": ""
             },
             "require": {
@@ -94,7 +94,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.22-dev"
+                    "dev-master": "1.23-dev"
                 }
             },
             "autoload": {
@@ -129,7 +129,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-09-22 13:59:32"
+            "time": "2015-10-29 23:29:01"
         },
         {
             "name": "umpirsky/country-list",
