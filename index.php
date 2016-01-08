@@ -6,6 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 $twig = new Twig_Environment(new Twig_Loader_Filesystem(__DIR__ . '/templates/'));
 
 $twig->addGlobal('baseurl', $_SERVER['SCRIPT_NAME']);
+$twig->addGlobal('phpversion', phpversion());
 
 /* Parse installed.json to get versions */
 $versionInfo = json_decode(file_get_contents(__DIR__ . '/vendor/composer/installed.json'), true);
