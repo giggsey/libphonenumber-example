@@ -40,11 +40,11 @@ $twig->addFunction(
 
 
 /* Check if we have loaded variables */
-if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '' && isset($_GET['country']) && $_GET['country'] != '') {
+if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '') {
 
     $input = array();
     $input['phonenumber'] = $_GET['phonenumber'];
-    $input['country'] = $_GET['country'];
+    $input['country'] = (isset($_GET['country'])) ? $_GET['country'] : null;
     $input['language'] = (isset($_GET['language']) && $_GET['language'] != '') ? $_GET['language'] : 'en';
     $input['region'] = (isset($_GET['region']) && $_GET['region'] != '') ? $_GET['region'] : null;
 
