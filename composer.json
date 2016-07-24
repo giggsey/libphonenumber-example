@@ -1,5 +1,6 @@
 {
     "description": "An example site using libphonenumber-for-php",
+    "license": "MIT",
     "authors": [
         {
             "name": "Joshua Gigg",
