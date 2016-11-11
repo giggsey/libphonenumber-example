@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c7df9cbfaedfeaf9b68e27860a0c237f",
     "content-hash": "8f511f7ae88abd4d8294fa7f43d3486a",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "7.7.3",
+            "version": "7.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "e55e956a7a8211af3dfbd9dd5372ccc5eb79e495"
+                "reference": "1f7ab8d8c0d56385e6d19b118e3827a526b85323"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/e55e956a7a8211af3dfbd9dd5372ccc5eb79e495",
-                "reference": "e55e956a7a8211af3dfbd9dd5372ccc5eb79e495",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/1f7ab8d8c0d56385e6d19b118e3827a526b85323",
+                "reference": "1f7ab8d8c0d56385e6d19b118e3827a526b85323",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +66,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2016-10-26 13:35:16"
+            "time": "2016-11-10T12:34:17+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -116,7 +115,7 @@
                 }
             ],
             "description": "Locale functions required by libphonenumber-for-php",
-            "time": "2016-10-24 20:49:55"
+            "time": "2016-10-24T20:49:55+00:00"
         },
         {
             "name": "twig/twig",
@@ -177,7 +176,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-10-25 19:17:17"
+            "time": "2016-10-25T19:17:17+00:00"
         },
         {
             "name": "umpirsky/country-list",
@@ -224,7 +223,7 @@
                 }
             ],
             "description": "List of all countries with names and ISO 3166-1 codes in all languages and data formats.",
-            "time": "2015-02-02 18:18:35"
+            "time": "2015-02-02T18:18:35+00:00"
         }
     ],
     "packages-dev": [],
