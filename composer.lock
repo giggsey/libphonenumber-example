@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f511f7ae88abd4d8294fa7f43d3486a",
+    "content-hash": "f15250b636a30ade2819c2facc1a75cc",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "7.7.5",
+            "version": "8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "7137cef7f295d225aec2a290f6829c1c71a1ffb0"
+                "reference": "9aae8b8948f0c2b7e2cfc87327f71c41670cd136"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/7137cef7f295d225aec2a290f6829c1c71a1ffb0",
-                "reference": "7137cef7f295d225aec2a290f6829c1c71a1ffb0",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/9aae8b8948f0c2b7e2cfc87327f71c41670cd136",
+                "reference": "9aae8b8948f0c2b7e2cfc87327f71c41670cd136",
                 "shasum": ""
             },
             "require": {
@@ -37,12 +37,12 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.x-dev"
+                    "dev-master": "8.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "libphonenumber": "src/"
+                "psr-4": {
+                    "libphonenumber\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -53,7 +53,7 @@
                 {
                     "name": "Joshua Gigg",
                     "email": "giggsey@gmail.com",
-                    "homepage": "http://giggsey.com/"
+                    "homepage": "https://giggsey.com/"
                 }
             ],
             "description": "PHP Port of Google's libphonenumber",
@@ -66,7 +66,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2016-11-23T15:39:02+00:00"
+            "time": "2016-12-12T09:08:42+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -119,16 +119,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.28.1",
+            "version": "v1.28.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "fff80c4a7ae1d47a81dfec10c76cbcb939170b45"
+                "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/fff80c4a7ae1d47a81dfec10c76cbcb939170b45",
-                "reference": "fff80c4a7ae1d47a81dfec10c76cbcb939170b45",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b22ce0eb070e41f7cba65d78fe216de29726459c",
+                "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~2.7"
+                "symfony/phpunit-bridge": "~3.2@dev"
             },
             "type": "library",
             "extra": {
@@ -176,7 +176,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-11-19T05:52:49+00:00"
+            "time": "2016-11-23T18:41:40+00:00"
         },
         {
             "name": "umpirsky/country-list",

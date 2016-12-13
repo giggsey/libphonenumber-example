@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "giggsey/libphonenumber-for-php": "~7.0",
+        "giggsey/libphonenumber-for-php": "^8.0",
         "twig/twig": "~1.6",
         "umpirsky/country-list": "~1.0"
     }
