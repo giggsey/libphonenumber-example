@@ -223,11 +223,21 @@
                         <th>Formatted Number</th>
                     </tr>
                 </thead>
-                <tbody
+                <tbody>
                     {% for region in regions %}
                     <tr>
-                        <td class='f32'><div class='flag {{region|lower}}' title='{{ region }}' data-toggle="tooltip" data-placement="top">{% if countries[region] is defined %}{{ countries[region]}}{% else %}<em>{{ region }}</em>{% endif %}</div></td>
+                        <td>
+                            <span title='{{ region }}' data-toggle="tooltip" data-placement="top" class="flag-country">
+                                <span class='flag-icon flag-icon-{{ region|lower }}'></span>
+                                {% if countries[region] is defined %}
+                                    {{ countries[region] }}
+                                {% else %}
+                                    <em>{{ region }}</em>
+                                {% endif %}
+                            </span>
+                        </td>
                         <td>{{ phoneUtil.formatOutOfCountryCallingNumber(phoneNumberObj, region)}}</td>
+                    </tr>
                     {% endfor %}
                 </tbody>
             </table>
