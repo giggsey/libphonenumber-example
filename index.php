@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . '/ratelimiter.php';
 require __DIR__ . '/vendor/autoload.php';
 
 /* Load Twig */
