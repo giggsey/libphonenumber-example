@@ -1,5 +1,14 @@
 {% extends '_page.twig' %}
-{% block title %}libphonenumber-for-php Demo{% endblock %}
+{% block title %}libphonenumber Demo{% endblock %}
+{% block scripts %}
+<script type="text/javascript">
+    {% if validNumber == true %}
+$(function () {
+        $("#out-of-country-calling").load("countryCalling.php?number={{ phoneUtil.format(phoneNumberObj, 0)|url_encode|escape('js') }}");
+});
+{% endif %}
+</script>
+{% endblock %}
 {% block content %}
     {% set tableWidth=6 %}
     <p class="lead"><a href="{{ baseurl }}">&laquo; Back to form</a></p>
@@ -223,8 +232,9 @@
                         <th>Formatted Number</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {% for region in regions %}
+                <tbody id='out-of-country-calling'>
+		<tr><td colspan='2'><div class='alert alert-info'>Loading...</div></td></tr>
+       {#             {% for region in regions %}
                     <tr>
                         <td>
                             <span title='{{ region }}' data-toggle="tooltip" data-placement="top" class="flag-country">
@@ -239,6 +249,7 @@
                         <td>{{ phoneUtil.formatOutOfCountryCallingNumber(phoneNumberObj, region)}}</td>
                     </tr>
                     {% endfor %}
+	#}
                 </tbody>
             </table>
         </div>
