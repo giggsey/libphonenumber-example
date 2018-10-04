@@ -18,7 +18,7 @@ $(function () {
 
     <h2><code>{{ get_class(phoneNumberObj) }}</code> Object</h2>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -72,7 +72,7 @@ $(function () {
 
     <h2>Validation Results</h2>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -166,7 +166,7 @@ $(function () {
 
     <h2>Formatting</h2>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -224,7 +224,7 @@ $(function () {
     {% if validNumber == true %}
     <h3>Format Out of Country Calling Number</h3>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
@@ -236,8 +236,18 @@ $(function () {
 		<tr><td colspan='2'><div class='alert alert-info'>Loading...</div></td></tr>
        {#             {% for region in regions %}
                     <tr>
-                        <td class='f32'><div class='flag {{region|lower}}' title='{{ region }}' data-toggle="tooltip" data-placement="top">{% if countries[region] is defined %}{{ countries[region]}}{% else %}<em>{{ region }}</em>{% endif %}</div></td>
+                        <td>
+                            <span title='{{ region }}' data-toggle="tooltip" data-placement="top" class="flag-country">
+                                <span class='flag-icon flag-icon-{{ region|lower }}'></span>
+                                {% if countries[region] is defined %}
+                                    {{ countries[region] }}
+                                {% else %}
+                                    <em>{{ region }}</em>
+                                {% endif %}
+                            </span>
+                        </td>
                         <td>{{ phoneUtil.formatOutOfCountryCallingNumber(phoneNumberObj, region)}}</td>
+                    </tr>
                     {% endfor %}
 	#}
                 </tbody>
@@ -251,7 +261,7 @@ $(function () {
 
     <h2>ShortNumberInfo</h2>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -325,7 +335,7 @@ $(function () {
 
     <h2>Example Numbers</h2>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -360,7 +370,7 @@ $(function () {
 
     <h2>PhoneNumberOfflineGeocoder Result</h2>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -385,7 +395,7 @@ $(function () {
 
     <h2>PhoneNumberToCarrierMapper Result</h2>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -410,7 +420,7 @@ $(function () {
 
     <h2>PhoneNumberToTimeZonesMapper Result</h2>
     <div class="row">
-        <div class="col-sm-{{ tableWidth }}">
+        <div class="col-{{ tableWidth }}">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
