@@ -1,6 +1,0 @@
-{% for region in regions %}
-                    <tr>
-                        <td class='f32'><div class='flag {{region|lower}}' title='{{ region }}' data-toggle="tooltip" data-placement="top">{% if countries[region] is defined %}{{ countries[region]}}{% else %}<em>{{ region }}</em>{% endif %}</div></td>
-                        <td>{{ phoneUtil.formatOutOfCountryCallingNumber(phoneNumberObj, region)}}</td>
-                    {% endfor %}
-
