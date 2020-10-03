@@ -1,18 +1,15 @@
 libphonenumber-example
 ======================
 
-Source of a demo website showing the functionality of libphonenumber as well as the Geolocation.  
+A simple demo application highlighting common features from [libphonenumber-for-php](https://github.com/giggsey/libphonenumber-for-php), hosted on [giggsey.com](https://giggsey.com/libphonenumber/).
 
-### Todo 
+### Installation
 
- - Get rid of Bower / SASS requirement (no point)
- - Show examples in PHP for each function
- - Allow multiple versions of libphonenumber (to compare versions)
- - Demo all features
-   - Phone Number Util
-   - Short Number Info
-   - Geolocation
-   - Carrier Mapping
-   - Timezone Mapping
-   - Phone Number Matcher
-   - As You Type Formatter
+ - Clone the repository
+ - Run `composer install`
+
+### Support
+
+Support is not offered directly with this demo repository.
+
+If you're having issues with libphonenumber-for-php, this demo can be used to check example numbers. Otherwise, check the [FAQ](https://github.com/giggsey/libphonenumber-for-php#faq) for libphonenumber-for-php.

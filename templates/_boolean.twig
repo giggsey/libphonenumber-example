@@ -1,0 +1,7 @@
+{% if v == true %}
+    <span class="badge bg-success"><i class="fa fa-check" aria-hidden="true"></i> true</span>
+{% elseif v == false %}
+    <span class="badge bg-danger"><i class="fa fa-times" aria-hidden="true"></i> false</span>
+{% else %}
+    <span class="badge bg-danger">Boolean value not passed in</span>
+{% endif %}
