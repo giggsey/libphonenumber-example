@@ -3,7 +3,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 /* Load Twig */
-$twig = new Twig_Environment(new Twig_Loader_Filesystem(__DIR__ . '/templates/'));
+$twig = new \Twig\Environment(new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates/'));
 
 $twig->addGlobal('baseurl', $_SERVER['SCRIPT_NAME']);
 $twig->addGlobal('phpversion', phpversion());
@@ -22,7 +22,7 @@ foreach ($versionInfo as $r) {
 
 $twig->addGlobal('version', $versionDetails);
 
-$twig->addFunction('get_class', new Twig_Function_Function('get_class'));
+$twig->addFunction(new \Twig\TwigFunction('get_class', 'get_class'));
 
 /* Check if we have loaded variables */
 if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '') {
@@ -82,7 +82,7 @@ if (isset($_GET['phonenumber']) && $_GET['phonenumber'] != '') {
 
     asort($regions);
 
-    $baseLanguagePath = __DIR__ . '/vendor/umpirsky/country-list/country/cldr/';
+    $baseLanguagePath = __DIR__ . '/vendor/umpirsky/country-list/data/';
 
     $resolvedPath = realpath($baseLanguagePath . $input['language'] . '/country.php');
     if (strpos($resolvedPath, $baseLanguagePath) === 0 && file_exists($resolvedPath)) {

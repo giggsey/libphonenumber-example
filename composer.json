@@ -1,16 +1,18 @@
 {
-    "description": "An example site using libphonenumber-for-php",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Joshua Gigg",
-            "email": "giggsey@gmail.com",
-            "homepage": "http://giggsey.com/"
-        }
-    ],
-    "require": {
-        "giggsey/libphonenumber-for-php": "^8.0",
-        "twig/twig": "~1.6",
-        "umpirsky/country-list": "~1.0"
+  "description": "An example site using libphonenumber-for-php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joshua Gigg",
+      "email": "giggsey@gmail.com",
+      "homepage": "http://giggsey.com/"
     }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "giggsey/libphonenumber-for-php": "^8.0",
+    "twig/twig": "^3.0",
+    "umpirsky/country-list": "^2.0"
+  }
 }
