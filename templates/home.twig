@@ -1,17 +1,16 @@
 {% extends '_page.twig' %}
 {% block title %}libphonenumber-for-php Demo{% endblock %}
 {% block content %}
-    <h1>libphonenumber-for-php Demo</h1>
+    <h1 class="mb-3">libphonenumber-for-php Demo</h1>
     <form method="get" action="">
-        <div class="form-group row">
+        <div class="row mb-3">
             <label for="phonenumber" class="col-3 col-form-label">Phone Number</label>
-
             <div class="col-9">
                 <input type="tel" class="form-control" id="phonenumber" name='phonenumber' required="required"
                        placeholder="0161 496 0000">
             </div>
         </div>
-        <div class="form-group row">
+        <div class="row mb-3">
             <label for="country" class="col-3 col-form-label">Default Country</label>
 
             <div class="col-9">
@@ -26,7 +25,7 @@
                     the region code to work out the phone number based on rules loaded for that region.</p>
             </div>
         </div>
-        <div class="form-group row">
+        <div class="row mb-3">
             <label for="language" class="col-3 col-form-label">Locale for Geocoding</label>
 
             <div class="col-9">
@@ -36,7 +35,8 @@
                                aria-describedby="languageHelpBlock">
                     </div>
                     <div class="col-3">
-                        <input type="text" class="form-control" id="region" name='region' placeholder="GB">
+                        <input type="text" class="form-control" id="region" name='region' placeholder="GB"
+                               aria-describedby="languageHelpBlock">
                     </div>
                 </div>
                 <p id="languageHelpBlock" class="form-text text-muted">An <a
@@ -45,7 +45,7 @@
             </div>
 
         </div>
-        <div class="form-group row">
+        <div class="row mb-3">
             <div class="offset-3 col-9">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>

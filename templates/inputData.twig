@@ -1,30 +1,34 @@
 <h2>Input Data</h2>
 <form>
-    <div class="form-group row">
-        <label class="col-3 col-form-label">Phone Number</label>
+    <div class="row mb-3">
+        <label class="col-3 col-form-label" for="phoneNumber">Phone Number</label>
         <div class="col-9">
-            <input class="form-control" type="text" value="{{ input['phonenumber']|escape('html') }}" readonly>
+            <input class="form-control" id="phoneNumber" type="text" value="{{ input['phonenumber']|escape('html') }}"
+                   readonly>
         </div>
     </div>
-    <div class="form-group row">
-        <label class="col-3 col-form-label">Default Country</label>
+    <div class="row mb-3">
+        <label class="col-3 col-form-label" for="defaultCountry">Default Country</label>
         <div class="col-9">
-            <input class="form-control" type="text" value="{{ input['country']|escape('html') }}" readonly>
+            <input class="form-control" id="defaultCountry" type="text" value="{{ input['country']|escape('html') }}"
+                   readonly>
         </div>
     </div>
     {% if input['language'] %}
-        <div class="form-group row">
-            <label class="col-3 col-form-label">Language</label>
+        <div class="row mb-3">
+            <label class="col-3 col-form-label" for="language">Language</label>
             <div class="col-9">
-                <input class="form-control" type="text" value="{{ input['language']|escape('html') }}" readonly>
+                <input class="form-control" id="language" type="text" value="{{ input['language']|escape('html') }}"
+                       readonly>
             </div>
         </div>
     {% endif %}
     {% if input['region'] %}
-        <div class="form-group row">
-            <label class="col-3 col-form-label">Region</label>
+        <div class="row mb-3">
+            <label class="col-3 col-form-label" for="region">Region</label>
             <div class="col-9">
-                <input class="form-control" type="text" value="{{ input['region']|escape('html') }}" readonly>
+                <input class="form-control" id="region" type="text" value="{{ input['region']|escape('html') }}"
+                       readonly>
             </div>
         </div>
     {% endif %}
