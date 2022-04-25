@@ -7,20 +7,7 @@ $twig = new \Twig\Environment(new \Twig\Loader\FilesystemLoader(__DIR__ . '/temp
 
 $twig->addGlobal('baseurl', $_SERVER['SCRIPT_NAME']);
 $twig->addGlobal('phpversion', phpversion());
-
-/* Parse installed.json to get versions */
-$versionInfo = json_decode(file_get_contents(__DIR__ . '/vendor/composer/installed.json'), true);
-
-$versionDetails = array();
-
-foreach ($versionInfo as $r) {
-    $versionDetails[$r['name']] = array(
-        'version' => $r['version'],
-        'actual' => $r['dist']['reference']
-    );
-}
-
-$twig->addGlobal('version', $versionDetails);
+$twig->addGlobal('version', \Composer\InstalledVersions::getVersion('giggsey/libphonenumber-for-php'));
 
 $twig->addFunction(new \Twig\TwigFunction('get_class', 'get_class'));
 
